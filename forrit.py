@@ -3,7 +3,7 @@ from datetime import *
 import os, pymysql, locale, sys
 
 locale.setlocale(locale.LC_ALL,"IS")
-conn = pymysql.connect(host='localhost', port=3306, user='root', passwd='', db='1501002670_vefforritun')
+conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='1501002670', passwd='mypassword', db='1501002670_vefforritun')
 try:
     @route('/')
     def index():
@@ -132,7 +132,7 @@ try:
     def villa500(error):
         return template('./v8/info',info="Villa 500 Villa í forriti")
 
-    #run(host="0.0.0.0", port=os.environ.get('PORT'))
-    run(host='localhost', port=8080, debug=True, reloader=True)
+    run(host="0.0.0.0", port=os.environ.get('PORT'))
+    #run(host='localhost', port=8080, debug=True, reloader=True)
 finally:
     conn.close()
