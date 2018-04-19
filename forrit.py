@@ -3,7 +3,7 @@ from datetime import *
 from locale import *
 import os, pymysql, sys
 
-setlocale(LC_TIME,"is-IS.utf8")
+setlocale(LC_TIME,"is-IS")
 conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='1501002670', passwd='mypassword', db='1501002670_vefforritun')
 try:
     @route('/')
