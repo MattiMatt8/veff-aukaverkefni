@@ -2,7 +2,7 @@ from bottle import *
 from datetime import *
 import os, pymysql, locale, sys
 
-locale.setlocale(locale.LC_TIME,"da_DK")
+locale.setlocale(locale.LC_TIME,"da-DK")
 conn = pymysql.connect(host='tsuts.tskoli.is', port=3306, user='1501002670', passwd='mypassword', db='1501002670_vefforritun')
 try:
     @route('/')
